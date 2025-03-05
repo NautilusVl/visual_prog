@@ -64,10 +64,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
         b_enter.setOnClickListener {
-            val optext = operation.text.toString() // Выражение в формате строки
+            val optext = operation.text.toString()
             if (optext.isNotEmpty()) {
                 try {
-                    val res = evaluateExpression(optext) // Вызов функции для вычисления выражения
+                    val res = evaluateExpression(optext)
                     result.text = if (res == res.toLong().toDouble()) res.toLong().toString() else res.toString()
                 } catch (e: Exception) {
                     result.text = "Error"
@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() {
             }
             if (expression[i] == '(') {
                 ops.add(expression[i])
-            } else if (expression[i] == ')') { // Если текущий символ - закрывающая скобка
+            } else if (expression[i] == ')') {
                 while (ops.isNotEmpty() && ops.last() != '(') {
                     values.add(applyOp(ops.removeAt(ops.size - 1), values.removeAt(values.size - 1), values.removeAt(values.size - 1)))
                 }

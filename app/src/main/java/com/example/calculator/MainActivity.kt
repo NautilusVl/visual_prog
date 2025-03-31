@@ -2,14 +2,19 @@ package com.example.calculator
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.content.Intent
+import android.util.Log
 import net.objecthunter.exp4j.ExpressionBuilder
 
 
 
 class MainActivity : AppCompatActivity() {
+    private var log_tag : String = "MY_LOG_TAG"
+    private lateinit var bGoToSecondActivity : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -74,6 +79,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        bGoToSecondActivity = findViewById<Button>(R.id.go_to_second_activity)
+        bGoToSecondActivity.setOnClickListener({
+            // Create an Intent to start the second activity
+            val randomIntent = Intent(this, second_activity::class.java)
+            // Start the new activity.
+            startActivity(randomIntent)
+        });
     }
     // ENTER FUNC
     fun evaluateExpression(expression: String): Double {

@@ -39,6 +39,14 @@
                 android:text=""
                 android:singleLine="true"
                 />
+            <Button
+                android:id="@+id/go_to_second_activity"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_weight="0.1"
+                android:textColor="#fc4f05"
+                android:text="SecAct"
+                />
 
         </LinearLayout>
         <LinearLayout
@@ -184,4 +192,3 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-

@@ -12,10 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Calculator"
         tools:targetApi="31">
+        <activity
+            android:name=".Calculator"
+            android:exported="false" />
+        <activity
+            android:name=".MP3"
+            android:exported="false" />
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false" />
+
         <service
             android:name=".SecondActivity"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <activity
             android:name=".MainActivity"

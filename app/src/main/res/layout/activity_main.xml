@@ -22,4 +22,10 @@
         android:layout_height="180dp"
         android:text="MP3"
         android:textColor="#fc4f05" />
+    <Button
+        android:id="@+id/go_to_GPS_activity"
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:text="GPS"
+        android:textColor="#fc4f05" />
 </LinearLayout>

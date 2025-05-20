@@ -21,11 +21,18 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:textColor="#fc4f05"
-            android:gravity="end"
-            android:textSize="50sp"
-            android:ellipsize="start"
-            android:text=""
-            android:singleLine="true"
+            android:gravity="center|end"
+            android:textSize="24sp"
+            android:ellipsize="marquee"
+            />
+        <ListView
+            android:id="@+id/songs_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#FFFFFF"
+            android:divider="#fc4f05"
+            android:dividerHeight="1dp"
+            android:fastScrollEnabled="true"
             />
     </LinearLayout>
     <LinearLayout
@@ -74,11 +81,24 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp">
-    <SeekBar
-        android:id="@+id/seek_bar"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#fc4f05"/>
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#fc4f05"/>
     </LinearLayout>
 </LinearLayout>
